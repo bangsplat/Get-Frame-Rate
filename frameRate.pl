@@ -3,10 +3,12 @@ use strict;	# Enforce some good programming rules
 
 #
 # frameRate.pl
-# version 0.2
+# version 1.0
 # 
 # created 2015-12-15
 # modified 2015-12-15
+# 
+# created by Theron Trowbridge
 #
 # use command line MediaInfo to determine video frame rate of media file
 # 
@@ -15,10 +17,9 @@ use strict;	# Enforce some good programming rules
 # 	(checks for both of these)
 # 
 
-# input is first ARGV[]
-my $input_file = $ARGV[0];
-
+# input is first command line parameter
 # make sure an input file was specified
+my $input_file = $ARGV[0];
 if ( $input_file eq undef ) { die "frameRate.pl <filename>\n\nPlease specify an input file\n"; }
 
 # check to see if MediaInfo CLI is installed
